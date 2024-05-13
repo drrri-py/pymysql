@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Mahasiswa</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+    <h3>Edit Dosen</h3>
+    <a href="/mahasiswa">Kembali</a><br><br>
+    <form action="/mahasiswa/update/{{ obj.id }}" method="POST">
+        <label for="nim">NIM:</label><br>
+        <input type="text" id="nim" name="nim" required value="{{obj.nim}}"><br>
+        <label for="nama">Nama: </label><br>
+        <input type="text" id="nama" name="nama" required value="{{ obj.nama}}"><br>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

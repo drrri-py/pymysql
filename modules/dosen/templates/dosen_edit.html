@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Dosen</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+    <h3>Edit Dosen</h3>
+    <a href="/dosen">Kembali</a><br><br>
+    <form action="/dosen/update/{{ obj.id }}" method="POST">
+        <label for="nidn">NIDN:</label><br>
+        <input type="text" id="nidn" name="nidn" required value="{{obj.nidn}}"><br>
+        <label for="nama">Nama: </label><br>
+        <input type="text" id="nama" name="nama" required value="{{ obj.nama}}"><br>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

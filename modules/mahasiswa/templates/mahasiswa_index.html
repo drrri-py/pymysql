@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Mahasiswa</title>
+    <link rel="stylesheet " href="/static/style.css" />
+</head>
+<body>
+    <h3>Data Mahasiswa</h3>
+    <a href="/mahasiswa/create">Tambah</a><br><br>
+    <table>
+        <thead>
+            <tr>
+                <th>NIM</th>
+                <th>Nama</th>
+                <th colspan="2">Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            {% for obj in data %}
+            <tr>
+                <td>{{ obj.nim }}</td>
+                <td>{{ obj.nama}}</td>
+                <td><a href="/mahasiswa/edit/{{ obj.id }}">Edit</a></td>
+                <td><a href="/mahasiswa/delete/{{ obj.id }}" title="delete" class="delete" onclick="return confirm('Anda yakin ingin mengahapus data ini?')">Hapus</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+<a href="/dosen">Dosen</a><br><br>
+</body>
+</html>
